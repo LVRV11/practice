@@ -1,24 +1,37 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(
-    MaterialApp(
+  runApp(MyFirstApp());
+}
+
+class MyFirstApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
       home: Scaffold(
-        backgroundColor: Color.fromARGB(255, 45, 45, 44),
+        backgroundColor: const Color.fromARGB(255, 78, 78, 78),
         appBar: AppBar(
-          title: const Text("My wiggyziggy App"),
+          title: const Text("My First App"),
           centerTitle: true,
         ),
-        body: const Center(
-          child: Text(
-            "This is my Homepage",
-            style: TextStyle(
-                fontSize: 30,
-                fontWeight: FontWeight.bold,
-                color: Color.fromARGB(255, 240, 244, 176)),
+        body: Center(
+          child: Container(
+            child: const Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  LinearProgressIndicator(value: 23),
+                  Text(
+                    '23%',
+                    style: TextStyle(color: Colors.white, fontSize: 20),
+                  ),
+                  Text(
+                    'Press Button',
+                    style: TextStyle(color: Colors.white, fontSize: 20),
+                  ),
+                ]),
           ),
         ),
       ),
-    ),
-  );
+    );
+  }
 }
