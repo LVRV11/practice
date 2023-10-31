@@ -16,6 +16,7 @@ class MyFirstApp extends StatelessWidget {
         ),
         body: Center(
           child: Container(
+            padding: const EdgeInsets.all(16),
             child: const Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
@@ -30,6 +31,10 @@ class MyFirstApp extends StatelessWidget {
                   ),
                 ]),
           ),
+        ),
+        floatingActionButton: const FloatingActionButton(
+          onPressed: null,
+          child: Icon(Icons.cloud_download),
         ),
       ),
     );
