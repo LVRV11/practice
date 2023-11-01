@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
                 ),
               ),
               IconButton(
-                icon: const Icon(Icons.add),
+                icon: const Icon(Icons.boy),
                 onPressed: () {
                   print('IconButton нажата!');
                 },
