@@ -1,6 +1,5 @@
-// import 'dart:async';
-
 import 'package:flutter/material.dart';
+import 'package:practice/counter_widget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,19 +12,19 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Color.fromARGB(255, 156, 164, 208),
+        backgroundColor: Color.fromARGB(255, 146, 146, 146),
         appBar: AppBar(
-          backgroundColor: Colors.indigo,
+          backgroundColor: Color.fromARGB(255, 210, 213, 126),
           centerTitle: true,
           title: const Text(
             'Counter',
           ),
         ),
-        body: Center(
+        body: const Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              const Text(
+              Text(
                 'Tap "-" to decrement',
                 style: TextStyle(
                   color: Colors.white,
@@ -33,13 +32,8 @@ class MyApp extends StatelessWidget {
                   fontSize: 20,
                 ),
               ),
-              IconButton(
-                icon: const Icon(Icons.boy),
-                onPressed: () {
-                  print('IconButton нажата!');
-                },
-              ),
-              const Text(
+              CounterWidget(),
+              Text(
                 'Tap "+" to increment',
                 style: TextStyle(
                   color: Colors.white,
@@ -54,6 +48,8 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+
 
 // class MyApp extends StatelessWidget {
 //   const MyApp({Key? key}) : super(key: key);
