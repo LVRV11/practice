@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: const Text(
-            'Weatherк',
+            'Weather',
             style: TextStyle(color: Colors.black87),
           ),
           centerTitle: true,
